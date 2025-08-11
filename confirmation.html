@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>
+        Home for Paws
+    </title>
+    <style>
+        body {
+            margin: 0;
+            color: #064232;
+        }
+
+        .company {
+            font-family: cursive;
+        }
+        
+        .header-section {
+            background-color: #568f87;
+            padding-bottom: 8px;
+        }
+
+        .header {
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 30px;
+            width: 30px;
+            border-radius: 1000px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 87vh;
+            background-color: #fff5f2;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #fcd8dc;
+            padding: 25px 0;
+            border-radius: 20px;
+            width: 50%;
+        }
+
+        button {
+            width: 30%;
+            padding: 10px 0px;
+            background-color: #568f87;
+            border: none;
+            border-radius: 1000px;
+            color: #064232;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: row;
+            align-self: flex-start;
+            padding: 0 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header-section">
+        <div class="header">
+            <div class="logo">
+                <img class="logo-img" src="images/logo.jpg" alt="" srcset="">
+                <h3 class="company">Home for Paws</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="form">
+            <h1>Confirmation</h1>
+            <div class="field">
+                <h3>Pet Name:&nbsp&nbsp</h3>
+                <h3 id="pet-name"></h3>
+            </div>
+            <div class="field">
+                <h3>Applicant Name:&nbsp&nbsp</h3>
+                <h3 id="user-name"></h3>
+            </div>
+            <div class="field">
+                <h3>Adoption Request Number: 25DOG15</h3>
+                <h3 id="adoption-no"></h3>
+            </div>
+            <button onclick="redirect()">Continue</button>
+        </div>
+        <div>
+            <p>💡Fun Fact: Dogs can learn over 100 words!</p>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    let userName = localStorage.getItem("name")
+    console.log(userName)
+    let petName = localStorage.getItem("pet-name")
+    console.log(petName)
+
+    document.getElementById("user-name").innerText = userName
+    document.getElementById("pet-name").innerText = petName
+
+    function redirect() {
+        window.location.href = "home.html";
+    }
+</script>
+
+</html>

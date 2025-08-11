@@ -1,0 +1,214 @@
+<html>
+
+<head>
+    <title>Home for Paws</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .header-section {
+            background-color: #568f87;
+            padding-bottom: 8px;
+        }
+
+        .header {
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .photos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            height: 120vh;
+            align-items: center;
+        }
+
+        .row1,
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 100px;
+        }
+
+        .card {
+            width: 230px;
+            height: 350px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid #568f87;
+        }
+
+        img {
+            height: 200px;
+            width: 230px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h2,
+        p {
+            margin: 0;
+        }
+
+        .pets {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .logo-img {
+            height: 30px;
+            width: 30px;
+            border-radius: 1000px;
+        }
+
+        h3 {
+            font-family: cursive;
+        }
+
+        .hero-section {
+            background-color: #fff5f2;
+            padding-top: 15px;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 7px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #568f87;
+            color: #064232;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header-section">
+        <div class="header">
+            <div class="logo">
+                <img class="logo-img" src="images/logo.jpg" alt="" srcset="">
+                <h3>Home for Paws</h3>
+            </div>
+        </div>
+
+    </section>
+    <section class="hero-section">
+        <div class="pets">
+            <h1 class="pets-head">Pets</h1>
+            <div class="photos">
+                <div class="row1">
+                    <div class="card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOyAsUMUdpdrpqvp8XGt188HumsBC_f_OadA&s"
+                            id="pet1">
+                        <h2>Leo</h2>
+                        <p>Dog</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.news18.com/webstories/uploads/2025/02/Screenshot-2025-02-22-at-11.09.12-AM-2025-02-fc4750cbc91b607eefb1042c030d49f3.png"
+                            id="pet2">
+                        <h2>Bella</h2>
+                        <p>Cat</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://www.aspca.org/sites/default/files/cat-care_general-cat-care_body1-left.jpg"
+                            id="pet3">
+                        <h2>Yana</h2>
+                        <p>Cat</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.pinimg.com/736x/b8/25/e1/b825e1484a21bb183466a3890df21c39.jpg" id="pet4">
+                        <h2>Hara</h2>
+                        <p>Rabbit</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="card">
+                        <img src="https://www.nylabone.com/-/media/project/oneweb/nylabone/images/dog101/10-intelligent-dog-breeds/golden-retriever-tongue-out.jpg?h=430&w=710&hash=7FEB820D235A44B76B271060E03572C7"
+                            id="pet5">
+                        <h2>Buddy</h2>
+                        <p>Dog</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://www.shutterstock.com/image-photo/beautiful-golden-retriever-cute-puppy-600nw-2526542701.jpg"
+                            id="pet6">
+                        <h2>Mittens</h2>
+                        <p>Dog</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://hips.hearstapps.com/hmg-prod/images/baby-rabbit-in-meadow-royalty-free-image-1717078659.jpg?crop=1xw:0.84494xh;center,top&resize=1200:*"
+                            id="pet7">
+                        <h2>Carrol</h2>
+                        <p>Rabbit</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.guim.co.uk/img/media/327aa3f0c3b8e40ab03b4ae80319064e401c6fbc/377_133_3542_2834/master/3542.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=34d32522f47e4a67286f9894fc81c863"
+                            id="pet8">
+                        <h2>Bob</h2>
+                        <p>Cat</p>
+                        <button onclick="redirect(this)" class="details">Details</button>
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+</body>
+<script>
+    function redirect(button) {
+        let card = button.parentElement;
+        let petName = card.querySelector("h2").textContent;
+        let petImage = card.querySelector("img").src;
+
+        let age = Math.floor(Math.random() * 10) + 1; 
+
+        let breeds = {
+            Leo: "German Shepherd",
+            Bella: "Persian Cat",
+            Yana: "Siamese Cat",
+            Hara: "Holland Lop",
+            Buddy: "Golden Retriever",
+            Mittens: "Labrador Retriever",
+            Carrol: "Netherland Dwarf",
+            Bob: "Maine Coon"
+        };
+
+        let breed = breeds[petName] || "Unknown Breed";
+
+        let petData = {
+            name: petName,
+            age: age,
+            breed: breed,
+            image: petImage
+        };
+
+        localStorage.setItem("petSelected", JSON.stringify(petData));
+        window.location.href = "details.html";
+    }
+</script>
+
+</html>

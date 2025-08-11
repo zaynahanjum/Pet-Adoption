@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>
+        Home for Paws
+    </title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .header-section {
+            background-color: #568f87;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-family: cursive;
+        }
+
+        .header {
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 30px;
+            width: 30px;
+            border-radius: 1000px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #064232;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 87vh;
+            background-color: #fff5f2;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #fcd8cd;
+            padding: 25px 0;
+            border-radius: 20px;
+            width: 50%;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background-color: #fff5f2;
+        }
+
+        button {
+            width: 30%;
+            padding: 10px 0px;
+            background-color: #568f87;
+            border: none;
+            border-radius: 1000px;
+            color: #064232;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header-section">
+        <div class="header">
+            <div class="logo">
+                <img class="logo-img" src="images/logo.jpg" alt="" srcset="">
+                <h3>Home for Paws</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="form">
+            <h1>Adoption Form</h1>
+            <input id="name" type="text" name="name" placeholder="Name">
+            <input id="email" type="email" name="email" placeholder="Email">
+            <input id="reason" type="text" name="reason" placeholder="Reason for Adoption">
+            <button onclick="redirect()">Confirm Adoption</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    let petName = localStorage.getItem("pet-name")
+    console.log(petName)
+
+    function redirect() {
+        let name = document.getElementById("name").value;
+        localStorage.setItem("name", name);
+        localStorage.setItem("pet-name", petName)
+
+        window.location.href = "confirmation.html";
+    }
+</script>
+
+</html>
