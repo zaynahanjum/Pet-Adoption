@@ -184,8 +184,16 @@
         let petName = card.querySelector("h2").textContent;
         let petImage = card.querySelector("img").src;
 
-        let age = Math.floor(Math.random() * 10) + 1; 
-
+        let age = {
+            Leo: 3,
+            Bella: 4,
+            Yana: 7,
+            Hara: 2,
+            Buddy: 1,
+            Mittens: 9,
+            Carrol: 2,
+            Bob: 3
+        }
         let breeds = {
             Leo: "German Shepherd",
             Bella: "Persian Cat",
@@ -196,12 +204,12 @@
             Carrol: "Netherland Dwarf",
             Bob: "Maine Coon"
         };
-
-        let breed = breeds[petName] || "Unknown Breed";
+        let petAge = age[petName]
+        let breed = breeds[petName]
 
         let petData = {
             name: petName,
-            age: age,
+            age: petAge,
             breed: breed,
             image: petImage
         };
